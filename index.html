@@ -807,6 +807,12 @@
     renderPainel();
   }
   if (!consent) $('#cookies').classList.add('visivel');
+  else {
+    // Visita de retorno: reaplica a escolha salva e registra no log.
+    var vSalvo = consent === 'granted' ? 'granted' : 'denied';
+    gtag('consent', 'update', { ad_storage: vSalvo, analytics_storage: vSalvo, ad_user_data: vSalvo, ad_personalization: vSalvo });
+    registro.push({ _hora: new Date().toLocaleTimeString('pt-BR'), consent_update: vSalvo, origem: 'escolha_salva' });
+  }
   $('#cookies-aceitar').addEventListener('click', function () { aplicarConsent('granted', 'banner'); });
   $('#cookies-recusar').addEventListener('click', function () { aplicarConsent('denied', 'banner'); });
   $('#abrir-cookies').addEventListener('click', function (e) { e.preventDefault(); $('#cookies').classList.add('visivel'); });
