@@ -29,7 +29,7 @@ Protótipo funcional da página de inscrição e da página de obrigado do lanç
 | UTMs | Primeiro toque em cookie (90 dias), último toque na sessão, campos ocultos no formulário |
 | Eventos | `form_view`, `form_start`, `lead_submit` com `event_id` no sucesso do envio, `qualify_lead`, `thank_you_view` |
 | Página de obrigado | Google Agenda, arquivo .ics com alerta 2 h antes, grupo de avisos, vídeo; pergunta a situação do consultório a quem pulou a etapa 2 |
-| SEO | `noindex`, title, description, headings e dados estruturados Event, Course e FAQPage |
+| SEO | `noindex`, title, description, headings, Open Graph e dados estruturados Event, Course e FAQPage |
 | UX celular | Uma coluna, fonte de 16 px nos campos, botão fixo que some perto do formulário e do rodapé |
 
 ## Diferença para produção
